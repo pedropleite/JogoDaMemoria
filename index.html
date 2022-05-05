@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <title>Memory Game</title>
+</head>
+
+<body>
+    <div id="startGame" class="layer">
+        <div class="layerBoard">
+            <span>Memory Game</span>
+            <button onclick="start()">START</button>
+        </div>
+    </div>
+    <div id="saves">
+        <table id="table">
+            <tr>
+                <th>
+                    <div id="currentTime">
+                        <span id="hours">00</span>
+                        :
+                        <span id="minutes">00</span>
+                        :
+                        <span id="seconds">00</span>
+                    </div>
+                    Record Times:
+                </th>
+            </tr>
+            <tr>
+                <td>00:01:33 | Tente novamente e bata o seu record!</td>
+            </tr>
+            <tr>
+                <td>00:02:46 | Tente novamente e bata o seu record!</td>
+            </tr>
+            <tr>
+                <td>00:01:52 | Tente novamente e bata o seu record!</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="board">
+    </div>
+
+    <div id="gameOver" class="layer">
+        <div class="layerBoard">
+            <span> You won the game, congrats !!</span>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </div>
+    <script src="/Script/game.js"></script>
+    <script src="/Script/interface.js"></script>
+</body>
+
+</html>

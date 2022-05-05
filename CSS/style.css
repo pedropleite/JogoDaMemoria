@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+}
+
+body {
+    background-color: rgb(200, 200, 200);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    height: 80vh;
+    bottom: 0;
+}
+
+.layer {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layerBoard {
+    height: 35vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid white;
+    border-right: none;
+    border-bottom: none;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.layerBoard {
+    font-size: 2.4rem;
+}
+
+.layerBoard button {
+    width: 30%;
+    height: 20%;
+    background-color: #bed01e;
+    border-radius: 10px;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+#board {
+    display: none;
+    grid-template: auto auto auto auto/ auto auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top: 8vh;
+    gap: 1vw;
+}
+
+.card {
+    height: 19vh;
+    width: 9vw;
+    min-height: 70px;
+    min-width: 70px;
+    font-family: sans-serif;
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+}
+
+.card_front,
+.card_back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+}
+
+.card_front {
+    background-color: #101c2c;
+    transform: rotateY(180deg)
+}
+
+.card_front img {
+    height: 11vh;
+    width: 5.5vw;
+}
+
+.card_back {
+    background-color: #05c3ff;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.flip {
+    transform: rotateY(180deg)
+}
+
+#gameOver {
+    display: none;
+}
+
+#gameOver span {
+    font-size: 1.8rem;
+}
+
+#saves {
+    height: 80%;
+    position: relative;
+    width: 30vw;
+    border-radius: 3px;
+    display: none;
+    text-align: left;
+}
+
+#saves table {
+    background-color: #05c3ff;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+#saves table,
+th,
+td {
+    width: 100%;
+    border: 1px solid black;
+}
+
+#saves th {
+    font-size: 1.5rem;
+    border: 3px solid black;
+}
+
+#currentTime {
+    display: none;
+}
+
+@media screen and (max-width:700px) {
+    #board {
+        top: -10vh;
+    }
+
+    #saves {
+        width: 80vw;
+    }
+}
