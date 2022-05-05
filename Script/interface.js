@@ -52,7 +52,7 @@ function initializeCards(cards) {
 
         let divFront = document.createElement("div")
         let imgFront = document.createElement("img")
-        imgFront.src = "./images/" + card.icon + ".png"
+        imgFront.src = "../images/" + card.icon + ".png"
         divFront.classList.add(FRONT)
 
         let divBack = document.createElement("div")
